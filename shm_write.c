@@ -1,5 +1,6 @@
-#include <sys/mman.h>                                                                                                                                      2 #include <sys/types.h>
+#include <sys/mman.h>                                                                                                                                  
 #include <sys/stat.h>
+#include <sys/types.h>
 #include <sys/ioctl.h>
 #include <sys/queue.h>
 #include <inttypes.h>
@@ -23,7 +24,7 @@ void *shm_create(char *name, unsigned int len)
     if(ftruncate(fd,len)){
         close(fd);
         return NULL;
-    }                                                                                                      return NULL;                                                                                                                                             }                                                                                                                                                            if (ftruncate(fd, len) < 0) {                                                                                                                                    close(fd);                                                                                                                                                   return NULL;                                                                                                                                             }                                                                                                                                                            
+    }                           
     result = lseek(fd, len-1, SEEK_SET);                                                                                                                        
     if (result == -1) {                                                                                                                                              
     close(fd);                                                                                                                                                   

@@ -14,7 +14,8 @@ int main()
     }
     memset(g_bandwidshmstat,0,mem_size);
     //random logic
-    for(int i=0;i<10;i++){
+    int i=0;
+    for(i=0;i<10;i++){
         g_bandwidshmstat[i].bandwidth_id=12345+i;
         g_bandwidshmstat[i].used=1;
         g_bandwidshmstat[i].is_shared=1;

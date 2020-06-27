@@ -1,5 +1,6 @@
-  1#ifndef _SHM_H                                                                                                                                          2 #define HGW_SHM_H
-  3#define _SHM_H
+#ifndef _SHM_H                                                                                                                               
+#define _SHM_H
+#include  <inttypes.h>
 
 
 typedef struct _stBandWidthShmStat{
@@ -24,7 +25,6 @@ typedef struct _stBandWidthShmStat{
     unsigned long tx_rldrop_bytes;
 }TBandWidthShmStat;
 
-  4 void *shm_create(char *name, unsigned int len);
-  5 int shm_del(void *addr, unsigned int len);
-  6
-  7 #endif
+void *shm_create(char *name, unsigned int len);
+int shm_del(void *addr, unsigned int len);
+#endif
