@@ -31,6 +31,6 @@ int main()
         sleep(10);
     }
 
-    shm_del(addr,len);
+    shm_del(g_bandwidshmstat,mem_size);
     return 0;
 }
